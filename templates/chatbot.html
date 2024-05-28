@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Chatbot</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h1>Chatbot</h1>
+                <div id="chatbot-container">
+                    {% if reply %}
+                       <p> {{ reply }} </p>
+                       
+                    {% endif %}
+                    
+                </div>
+                <form action="/"  method="POST">
+                    <input type="text" id="user-input" name="user-input" class="form-control" placeholder="Type your message...">
+                    <p><input type = "submit" value = "submit" /></p>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
