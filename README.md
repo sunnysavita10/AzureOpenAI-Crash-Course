@@ -1,0 +1,1 @@
+AzureOpenAI Crash Course
