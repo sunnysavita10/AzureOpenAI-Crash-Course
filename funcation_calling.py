@@ -52,7 +52,7 @@ def main():
     get_weather(location)
 
 def get_weather(location):
-    url = "https://api.openweathermap.org/data/2.5/weather?q="+ location + "&appid=7a3d0508f35efc35a5764a80488aaa48"
+    url = "https://api.openweathermap.org/data/2.5/weather?q=" + location  + "&appid=9714c902c784730338c95bd3140cc6ed"
     response=requests.get(url)
     get_response=response.json()
     latitude=get_response['coord']['lat']
@@ -60,7 +60,7 @@ def get_weather(location):
     print(f"latitude: {latitude}")
     print(f"longitude: {longitude}")
 
-    url_final ="https://api.openweathermap.org/data/2.5/weather?lat="+ str(latitude) + "&lon=" + str(longitude) + "&appid=7a3d0508f35efc35a5764a80488aaa48"
+    url_final ="https://api.openweathermap.org/data/2.5/weather?lat="+ str(latitude) + "&lon=" + str(longitude) + "&appid=9714c902c784730338c95bd3140cc6ed"
     final_response = requests.get(url_final)
     final_response_json = final_response.json()
     weather=final_response_json['weather'][0]['description']
